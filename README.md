@@ -1,13 +1,14 @@
 # Landing Page Project
 
-## Table of Contents
+**My first project during Egypt-FWD initive offered by ITIDA**
 
-* [Instructions](#instructions)
+---
 
-## Instructions
+It's a Landing Page built with `HTML`, `CSS` & the powerful `JavaScript` ♥
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+I've used `JavaScript` to make it more dynamic, here's how :\_
 
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+1.  Automaticaly create nav menu links based on how many section in the document
+    - Using section `data` attribute to get the name of the section
+    - Using section `id` attribute to help nav menu links to navigate to it
+2.  Change active status for the section that's in window viewpoint smoothly for more focus & better UI/UX
