@@ -73,6 +73,15 @@ section {
 
 .navbar__menu li {
   display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.navbar__menu li.active {
+  background: #121212;
+}
+
+.navbar__menu li.active .menu__link {
+  color: #fff;
 }
 
 .navbar__menu .menu__link {
@@ -81,6 +90,7 @@ section {
   font-weight: bold;
   text-decoration: none;
   color: #000;
+  transition: color 0.3s ease;
 }
 
 .navbar__menu .menu__link:hover {

@@ -128,6 +128,19 @@ document.addEventListener("scroll", function () {
 
       // Add active class to visiable (half visiable) section
       section.classList.add("your-active-class");
+
+      // Get Section id to get nav link
+      const sectionId = section.id;
+
+      // Nav LI
+      const navListItem = document.querySelector(`a[href="#${sectionId}"]`)
+        .parentElement;
+
+      // Remove 'active' calss from LI siblings
+      removeClassFromSiblings(navListItem, "active");
+
+      // Add 'active' on proper link that reference  to section in the viewpoint
+      navListItem.classList.add("active");
     }
   });
 });
