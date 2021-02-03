@@ -22,6 +22,7 @@ const sections = document.querySelectorAll("section");
 
 const navbarList = document.querySelector("#navbar__list");
 
+// Fragment container for list items
 const fragment = document.createDocumentFragment();
 
 /**
@@ -31,18 +32,28 @@ const fragment = document.createDocumentFragment();
  */
 
 const createNavLink = function (section) {
+  // Get Section name from data-* attribute
   const sectioName = section.dataset.nav;
+
+  // Get id
   const sectionId = section.id;
 
+  // Create LI
   const listItem = document.createElement("LI");
+
+  // Create Link
   const navLink = document.createElement("A");
 
+  // Set href attribute, Class & innerContent
   navLink.setAttribute("href", `#${sectionId}`);
-  navLink.innerText = sectioName;
   navLink.classList.add("menu__link");
+  navLink.innerText = sectioName;
 
+  // Append the link to LI
   listItem.appendChild(navLink);
-  fragment.appendChild(listItem);
+
+  // return create LI
+  return listItem;
 };
 
 const inViewpoint = function (element) {
@@ -72,7 +83,12 @@ const removeClassFromSiblings = function (childElement, className) {
 
 // Build menu
 // 01 - Create Links
-sections.forEach((section) => createNavLink(section));
+sections.forEach((section) => {
+  const li = createNavLink(section);
+
+  // Append Li to fragment
+  fragment.appendChild(li);
+});
 
 // 02 - Append created links to DOM
 navbarList.appendChild(fragment);
@@ -91,8 +107,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     let offsetTop = document.querySelector(targetId).offsetTop;
 
     // for better UX
-    offsetTop -= navbarList.offsetHeight; // Remove nav menu height to offset
-    offsetTop -= 50; // Remove nav menu height to offset
+    offsetTop -= navbarList.offsetHeight; // Remove nav menu height from offset
+    offsetTop -= 50; // Extra
 
     // Scroll to that offsetTop smoothly
     window.scrollTo({
