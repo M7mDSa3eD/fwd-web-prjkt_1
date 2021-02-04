@@ -1,6 +1,6 @@
 # Landing Page Project
 
-**My first project during Egypt-FWD initive learning jounary offered by ITIDA**
+**My first project during Egypt-FWD initiative learning jounary offered by ITIDA**
 
 ---
 ## Description
